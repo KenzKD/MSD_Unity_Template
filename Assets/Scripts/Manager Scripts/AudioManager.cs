@@ -69,6 +69,7 @@ public class AudioManager : MonoBehaviour
             StopSFX();
         }
 
+        sfxSource.pitch = UnityEngine.Random.Range(0.9f, 1.1f);
         if (sfxSource.loop)
         {
             sfxSource.clip = sound.clip;

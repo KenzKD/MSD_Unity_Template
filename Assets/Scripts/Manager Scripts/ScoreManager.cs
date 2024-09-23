@@ -71,6 +71,9 @@ public class ScoreManager : MonoBehaviour
     IEnumerator PreWin(float seconds)
     {
         yield return new WaitForSeconds(seconds);
+
+        Sequence sequence = DOTween.Sequence();
+
     }
 
     // Handle wrong answer

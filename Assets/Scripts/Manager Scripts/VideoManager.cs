@@ -17,7 +17,7 @@ public class VideoManager : MonoBehaviour
     // Array of available videos
     public Video[] videos;
 
-    void Start()
+    private void Start()
     {
         Instance = this;
         DontDestroyOnLoad(gameObject);

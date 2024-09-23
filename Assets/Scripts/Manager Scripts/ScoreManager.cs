@@ -16,7 +16,7 @@ public class ScoreManager : MonoBehaviour
     public ShakePreset ShakePreset;
 
     // Initialize game state and UI
-    void Start()
+    private void Start()
     {
         Instance = this;
         scoreText.text = $"{score}/{total_Score}";
@@ -34,7 +34,7 @@ public class ScoreManager : MonoBehaviour
     }
 
     // Check if the score equals the total score
-    void CheckWin()
+    private void CheckWin()
     {
         if (score == total_Score)
         {
@@ -47,7 +47,7 @@ public class ScoreManager : MonoBehaviour
     }
 
     // Handle winning the game
-    IEnumerator Win(float seconds)
+    private IEnumerator Win(float seconds)
     {
         yield return new WaitForSeconds(seconds);
         Time.timeScale = 0f;
@@ -61,7 +61,7 @@ public class ScoreManager : MonoBehaviour
     }
 
     // Handle Pre-Winning the game
-    IEnumerator PreWin(float seconds)
+    private IEnumerator PreWin(float seconds)
     {
         yield return new WaitForSeconds(seconds);
         AudioManager.Instance.PlaySFX("Bonus");

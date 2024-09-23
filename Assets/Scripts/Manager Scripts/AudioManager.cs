@@ -32,7 +32,7 @@ public class AudioManager : MonoBehaviour
     private int sfxIndex = 0, sfxLoopingIndex = 0;
 
     // Initialize the audio manager
-    void Awake()
+    private void Awake()
     {
         Instance = this; // Set in Awake() for Bgm and Sfx volume preferences
 
@@ -41,7 +41,7 @@ public class AudioManager : MonoBehaviour
     }
 
     // Start playing the BGM
-    void Start()
+    private void Start()
     {
         bgmSource.Stop();
         PlayBGM("Theme");

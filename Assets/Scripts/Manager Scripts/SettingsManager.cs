@@ -20,7 +20,7 @@ public class SettingsManager : MonoBehaviour
     private bool isAnimating = false;
 
     // Initialize game state and UI
-    void Start()
+    private void Start()
     {
         Instance = this;
         Time.timeScale = 0f;
@@ -59,7 +59,7 @@ public class SettingsManager : MonoBehaviour
     // Check if gameplay is allowed
     public bool AllowGamePlay()
     {
-        return !EventSystem.current.IsPointerOverGameObject() && SettingsManager.GameisStarted && !SettingsManager.GameisPaused;
+        return !EventSystem.current.IsPointerOverGameObject() && GameisStarted && !GameisPaused;
     }
 
     // Adjust BGM volume

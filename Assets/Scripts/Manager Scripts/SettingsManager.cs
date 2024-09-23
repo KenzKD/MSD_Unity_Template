@@ -10,7 +10,7 @@ public class SettingsManager : MonoBehaviour
     public static SettingsManager Instance;
 
     // Game state flags
-    public static bool GameisPaused = false, GameisStarted = false;
+    public static bool GameisPaused, GameisStarted, isPausible = true;
 
     // UI elements
     public Slider _bgmSlider, _sfxSlider;
@@ -29,13 +29,23 @@ public class SettingsManager : MonoBehaviour
         introPanel.SetActive(true);
         settingsPanel.SetActive(false);
         scorePanel.SetActive(false);
-        settingObject.SetActive(true);
         restartObject.SetActive(false);
         settingsBGM = settingsPanel.GetComponent<Image>();
 
-        // Load volume settings or set to max
-        _bgmSlider.value = PlayerPrefs.GetFloat("bgmSavedVolume", _bgmSlider.maxValue);
-        _sfxSlider.value = PlayerPrefs.GetFloat("sfxSavedVolume", _sfxSlider.maxValue);
+        if (isPausible)
+        {
+            settingObject.SetActive(false);
+            _bgmSlider.value = _bgmSlider.maxValue;
+            _sfxSlider.value = _sfxSlider.maxValue;
+            StartGame();
+        }
+        else
+        {
+            settingObject.SetActive(true);
+            // Load volume settings or set to max
+            _bgmSlider.value = PlayerPrefs.GetFloat("bgmSavedVolume", _bgmSlider.maxValue);
+            _sfxSlider.value = PlayerPrefs.GetFloat("sfxSavedVolume", _sfxSlider.maxValue);
+        }
 
         // Apply the volume settings
         BgmSliderVolume();
@@ -45,13 +55,11 @@ public class SettingsManager : MonoBehaviour
     // Start the game
     public void StartGame()
     {
+        Time.timeScale = 1f;
         DOTween.PlayAll();
         introPanel.SetActive(false);
         scorePanel.SetActive(true);
         restartObject.SetActive(true);
-        Time.timeScale = 1f;
-        settingObject.SetActive(true);
-        settingObject.transform.DOScale(1, 0.5f).SetEase(Ease.OutExpo).SetUpdate(true);
         GameisPaused = false;
         GameisStarted = true;
     }

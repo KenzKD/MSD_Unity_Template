@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 10
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -43,7 +43,6 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 12
-  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -66,9 +65,6 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_FinalGather: 0
-    m_FinalGatherFiltering: 1
-    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 1
@@ -96,7 +92,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -122,6 +118,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1624622016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4261884307084860395, guid: ff8aa9b9fa9f3464a93658f37a824670,
+    type: 3}
+  m_PrefabInstance: {fileID: 1870306669}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1624622018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624622016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb2b360ee648b3f4cb84bc68ae5073c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1870306669
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -130,6 +144,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 404840040082232885, guid: ff8aa9b9fa9f3464a93658f37a824670,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 437789886597091988, guid: ff8aa9b9fa9f3464a93658f37a824670,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 685611519515747667, guid: ff8aa9b9fa9f3464a93658f37a824670,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -195,15 +219,54 @@ PrefabInstance:
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 4145860044788311972, guid: ff8aa9b9fa9f3464a93658f37a824670,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4224517475602703599, guid: ff8aa9b9fa9f3464a93658f37a824670,
         type: 3}
       propertyPath: m_Pitch
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4261884307084860395, guid: ff8aa9b9fa9f3464a93658f37a824670,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5272672650079809680, guid: ff8aa9b9fa9f3464a93658f37a824670,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7960166467108768491, guid: ff8aa9b9fa9f3464a93658f37a824670,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8203045327630201255, guid: ff8aa9b9fa9f3464a93658f37a824670,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616750184014225738, guid: ff8aa9b9fa9f3464a93658f37a824670,
+        type: 3}
+      propertyPath: sfx.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: fc05b25a1d8578a4caa9c0a68c993493, type: 3}
+    - target: {fileID: 8965697440540033274, guid: ff8aa9b9fa9f3464a93658f37a824670,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4261884307084860395, guid: ff8aa9b9fa9f3464a93658f37a824670,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1624622018}
   m_SourcePrefab: {fileID: 100100000, guid: ff8aa9b9fa9f3464a93658f37a824670, type: 3}
 --- !u!1 &1914012980
 GameObject:
@@ -233,6 +296,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

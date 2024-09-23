@@ -49,20 +49,13 @@ public class ScoreManager : MonoBehaviour
     // Handle winning the game
     IEnumerator Win(float seconds)
     {
-        AudioManager.Instance.SetSFXAllowOverlap(true);
-        // AudioManager.Instance.SetSFXLooping(false);
-        // AudioManager.Instance.PlaySFX("Bonus");
-        // Cam.transform.DOMove(new Vector3(0f, 0f, 0f), 1.5f).SetEase(Ease.Linear).OnComplete(() =>
-        //    {
-        //    });
         yield return new WaitForSeconds(seconds);
-        AudioManager.Instance.SetSFXAllowOverlap(false);
-        AudioManager.Instance.SetSFXLooping(false);
         Time.timeScale = 0f;
         VideoManager.Instance.PlayVideo("Win");
         Debug.Log("Win!");
-        AudioManager.Instance.bgmSource.Stop();
-        AudioManager.Instance.sfxSource.Stop();
+        AudioManager.Instance.StopBGM();
+        AudioManager.Instance.StopSFX();
+        AudioManager.Instance.StopLoopingSFX();
         AudioManager.Instance.PlaySFX("Win");
         WinScreen.SetActive(true);
     }
@@ -71,6 +64,7 @@ public class ScoreManager : MonoBehaviour
     IEnumerator PreWin(float seconds)
     {
         yield return new WaitForSeconds(seconds);
+        AudioManager.Instance.PlaySFX("Bonus");
 
         Sequence sequence = DOTween.Sequence();
 

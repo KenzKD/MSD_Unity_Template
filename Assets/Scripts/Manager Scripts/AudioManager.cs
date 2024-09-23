@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -21,15 +23,21 @@ public class AudioManager : MonoBehaviour
     public Sound[] bgm, sfx;
 
     // Audio sources for background music and sound effects
-    public AudioSource bgmSource, sfxSource;
+    public AudioSource bgmSource, menuSource;
 
-    // Flag to allow overlapping sound effects
-    private static bool sfxAllowOverlap = false;
+    public GameObject sfxParent, sfxLoopingParent;
+
+    private List<AudioSource> sfxSources, sfxLoopingSources;
+
+    private int sfxIndex = 0, sfxLoopingIndex = 0;
 
     // Initialize the audio manager
     void Awake()
     {
         Instance = this; // Set in Awake() for Bgm and Sfx volume preferences
+
+        sfxSources = sfxParent.GetComponentsInChildren<AudioSource>().ToList();
+        sfxLoopingSources = sfxLoopingParent.GetComponentsInChildren<AudioSource>().ToList();
     }
 
     // Start playing the BGM
@@ -55,7 +63,7 @@ public class AudioManager : MonoBehaviour
     }
 
     // Play a sound effect by name
-    public void PlaySFX(string name)
+    public void PlaySFX(string name, bool sfxAllowOverlap = false, bool RandomizePitch = true)
     {
         Sound sound = Array.Find(sfx, s => s.name == name);
         if (sound == null)
@@ -69,34 +77,67 @@ public class AudioManager : MonoBehaviour
             StopSFX();
         }
 
-        sfxSource.pitch = UnityEngine.Random.Range(0.9f, 1.1f);
-        if (sfxSource.loop)
+        if (RandomizePitch)
         {
-            sfxSource.clip = sound.clip;
-            sfxSource.Play();
+            sfxSources[sfxIndex].pitch = UnityEngine.Random.Range(0.9f, 1.1f);
         }
         else
         {
-            sfxSource.PlayOneShot(sound.clip);
+            sfxSources[sfxIndex].pitch = 1f;
         }
+
+        sfxSources[sfxIndex].clip = sound.clip;
+        sfxSources[sfxIndex].Play();
+        sfxIndex = (sfxIndex + 1) % sfxSources.Count;
     }
 
-    // Toggle sfxAllowOverlap
-    public void SetSFXAllowOverlap(bool allowOverlap)
+    public void PlayMenuSFX(string name)
     {
-        sfxAllowOverlap = allowOverlap;
+        Sound sound = Array.Find(sfx, s => s.name == name);
+        if (sound == null)
+        {
+            Debug.LogWarning($"Sound '{name}' not found!");
+            return;
+        }
+
+        menuSource.PlayOneShot(sound.clip);
+    }
+
+    // Play a sound effect by name
+    public void PlayLoopingSFX(string name, bool sfxAllowOverlap = false)
+    {
+        Sound sound = Array.Find(sfx, s => s.name == name);
+        if (sound == null)
+        {
+            Debug.LogWarning($"Sound '{name}' not found!");
+            return;
+        }
+
+        if (!sfxAllowOverlap)
+        {
+            StopLoopingSFX();
+        }
+
+        sfxLoopingSources[sfxLoopingIndex].clip = sound.clip;
+        sfxLoopingSources[sfxLoopingIndex].Play();
+        sfxLoopingIndex = (sfxLoopingIndex + 1) % sfxLoopingSources.Count;
     }
 
     // Toggle looping of sfxSource
-    public void SetSFXLooping(bool isLooping)
+    public void StopLoopingSFX()
     {
-        sfxSource.loop = isLooping;
+        sfxLoopingSources.All(s => { s.Stop(); return true; });
     }
 
     // Stop sfxSource
     public void StopSFX()
     {
-        sfxSource.Stop();
+        sfxSources.All(s => { s.Stop(); return true; });
+    }
+
+    public void StopBGM()
+    {
+        bgmSource.Stop();
     }
 
     // Adjust the volume of the background music

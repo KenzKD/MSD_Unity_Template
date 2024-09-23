@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 using DG.Tweening;
 
 public class SettingsManager : MonoBehaviour
@@ -147,7 +148,7 @@ public class SettingsManager : MonoBehaviour
     }
 
     // Quit the game
-    public void QuitGame()
+    public void OnQuit()
     {
         DOTween.KillAll();
         Debug.Log("Quitting Game...");

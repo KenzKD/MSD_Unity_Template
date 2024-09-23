@@ -1,13 +1,5 @@
 {
   "dependencies": {
-    "com.nvidia.omniverse.connector": {
-      "version": "file:C:/Users/msdof/AppData/Local/ov/pkg/unity-connector-202.0.1/com.nvidia.omniverse.connector",
-      "depth": 0,
-      "source": "local",
-      "dependencies": {
-        "com.unity.editorcoroutines": "1.0.0"
-      }
-    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
@@ -62,13 +54,6 @@
         "com.unity.nuget.mono-cecil": "1.11.4",
         "com.unity.test-framework.performance": "3.0.3"
       },
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.editorcoroutines": {
-      "version": "1.0.0",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.ext.nunit": {

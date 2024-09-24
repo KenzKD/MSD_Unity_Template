@@ -837,23 +837,24 @@ PlayerSettings:
   webGLCloseOnQuit: 0
   webWasm2023: 0
   scriptingDefineSymbols:
-    Android: DOTWEEN
-    EmbeddedLinux: DOTWEEN
+    Android: DOTWEEN;EXTOSC
+    EmbeddedLinux: DOTWEEN;EXTOSC
     GameCoreScarlett: DOTWEEN
-    GameCoreXboxOne: DOTWEEN
+    GameCoreXboxOne: DOTWEEN;EXTOSC
     LinuxHeadlessSimulation: DOTWEEN
-    Nintendo Switch: DOTWEEN
-    PS4: DOTWEEN
-    PS5: DOTWEEN
-    QNX: DOTWEEN
+    Nintendo Switch: DOTWEEN;EXTOSC
+    PS4: DOTWEEN;EXTOSC
+    PS5: DOTWEEN;EXTOSC
+    QNX: DOTWEEN;EXTOSC
+    ReservedCFE: EXTOSC
     Stadia: DOTWEEN
-    Standalone: DOTWEEN
-    VisionOS: DOTWEEN
-    WebGL: DOTWEEN
+    Standalone: DOTWEEN;EXTOSC
+    VisionOS: DOTWEEN;EXTOSC
+    WebGL: DOTWEEN;EXTOSC
     Windows Store Apps: DOTWEEN
-    XboxOne: DOTWEEN
+    XboxOne: DOTWEEN;EXTOSC
     iPhone: DOTWEEN
-    tvOS: DOTWEEN
+    tvOS: DOTWEEN;EXTOSC
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
@@ -971,7 +972,7 @@ PlayerSettings:
   qnxGraphicConfPath: 
   apiCompatibilityLevel: 3
   captureStartupLogs: {}
-  activeInputHandler: 1
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: 
   framebufferDepthMemorylessMode: 0

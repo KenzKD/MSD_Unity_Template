@@ -30,17 +30,17 @@ MonoBehaviour:
     supportVolumetrics: 1
     supportVolumetricClouds: 0
     supportLightLayers: 0
-    renderingLayerMaskBuffer: 1
-    supportWater: 1
-    waterSimulationResolution: 128
+    renderingLayerMaskBuffer: 0
+    supportWater: 0
+    waterSimulationResolution: 256
     supportWaterExclusion: 1
     supportWaterDecals: 1
-    waterDecalAtlasSize: 1024
+    waterDecalAtlasSize: 2048
     maximumWaterDecalCount: 48
     waterScriptInteractionsMode: 0
     waterFullCPUSimulation: 0
-    supportComputeThickness: 0
-    computeThicknessResolution: 1
+    supportComputeThickness: 1
+    computeThicknessResolution: 0
     computeThicknessLayerMask:
       serializedVersion: 2
       m_Bits: 0
@@ -48,16 +48,16 @@ MonoBehaviour:
     supportTransparentBackface: 1
     supportTransparentDepthPrepass: 1
     supportTransparentDepthPostpass: 1
-    colorBufferFormat: 74
+    colorBufferFormat: 48
     supportCustomPass: 1
-    customBufferFormat: 8
+    customBufferFormat: 48
     supportedLitShaderMode: 2
     planarReflectionResolution:
-      m_Values: 000100000004000000080000
+      m_Values: 000800000008000000080000
       m_SchemaId:
         m_Id: With3Levels
     cubeReflectionResolution:
-      m_Values: 800000000001000000020000
+      m_Values: 000800000008000000080000
       m_SchemaId:
         m_Id: With3Levels
     supportDecals: 1
@@ -65,7 +65,7 @@ MonoBehaviour:
     supportSurfaceGradient: 0
     decalNormalBufferHP: 0
     supportHighQualityLineRendering: 1
-    highQualityLineRenderingMemoryBudget: 128
+    highQualityLineRenderingMemoryBudget: 512
     msaaSampleCount: 1
     supportMotionVectors: 1
     supportScreenSpaceLensFlare: 1
@@ -75,8 +75,8 @@ MonoBehaviour:
     supportTerrainHole: 0
     lightProbeSystem: 1
     oldLightProbeSystem: 0
-    probeVolumeMemoryBudget: 1024
-    supportProbeVolumeGPUStreaming: 0
+    probeVolumeMemoryBudget: 2048
+    supportProbeVolumeGPUStreaming: 1
     supportProbeVolumeDiskStreaming: 0
     probeVolumeSHBands: 1
     supportProbeVolumeScenarios: 0
@@ -95,12 +95,12 @@ MonoBehaviour:
       reflectionCubemapSize: 0
       maxEnvLightsOnScreen: 0
       reflectionCacheCompressed: 0
-      reflectionProbeFormat: 74
-      reflectionProbeTexCacheSize: 4096
+      reflectionProbeFormat: 48
+      reflectionProbeTexCacheSize: 2048
       reflectionProbeTexLastValidCubeMip: 3
       reflectionProbeTexLastValidPlanarMip: 0
       reflectionProbeDecreaseResToFit: 1
-      skyReflectionSize: 256
+      skyReflectionSize: 2048
       skyLightingOverrideLayerMask:
         serializedVersion: 2
         m_Bits: 0
@@ -113,34 +113,34 @@ MonoBehaviour:
       maxDecalsOnScreen: 512
       maxLightsPerClusterCell: 8
       maxLocalVolumetricFogSize: 0
-      maxLocalVolumetricFogOnScreen: 256
+      maxLocalVolumetricFogOnScreen: 1024
     hdShadowInitParams:
       maxShadowRequests: 128
       directionalShadowsDepthBits: 32
-      punctualShadowFilteringQuality: 1
-      directionalShadowFilteringQuality: 1
-      areaShadowFilteringQuality: 0
+      punctualShadowFilteringQuality: 2
+      directionalShadowFilteringQuality: 2
+      areaShadowFilteringQuality: 1
       punctualLightShadowAtlas:
-        shadowAtlasResolution: 4096
+        shadowAtlasResolution: 2048
         shadowAtlasDepthBits: 32
         useDynamicViewportRescale: 1
       areaLightShadowAtlas:
-        shadowAtlasResolution: 4096
+        shadowAtlasResolution: 2048
         shadowAtlasDepthBits: 32
         useDynamicViewportRescale: 1
       cachedPunctualLightShadowAtlas: 2048
-      cachedAreaLightShadowAtlas: 1024
-      allowDirectionalMixedCachedShadows: 0
+      cachedAreaLightShadowAtlas: 2048
+      allowDirectionalMixedCachedShadows: 1
       shadowResolutionDirectional:
-        m_Values: 00010000000200000004000000080000
+        m_Values: 00080000000800000008000000080000
         m_SchemaId:
           m_Id: With4Levels
       shadowResolutionPunctual:
-        m_Values: 00010000000200000004000000080000
+        m_Values: 00080000000800000008000000080000
         m_SchemaId:
           m_Id: With4Levels
       shadowResolutionArea:
-        m_Values: 00010000000200000004000000080000
+        m_Values: 00080000000800000004000000080000
         m_SchemaId:
           m_Id: With4Levels
       maxDirectionalShadowMapResolution: 2048
@@ -161,7 +161,7 @@ MonoBehaviour:
     postProcessSettings:
       m_LutSize: 32
       lutFormat: 48
-      bufferFormat: 74
+      bufferFormat: 48
     dynamicResolutionSettings:
       enabled: 1
       useMipBias: 0
@@ -175,7 +175,7 @@ MonoBehaviour:
       DLSSSharpness: 0.5
       FSR2EnableSharpness: 0
       FSR2Sharpness: 0
-      FSR2UseOptimalSettings: 0
+      FSR2UseOptimalSettings: 1
       FSR2QualitySetting: 0
       FSR2InjectionPoint: 0
       fsrOverrideSharpness: 0

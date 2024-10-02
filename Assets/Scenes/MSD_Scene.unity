@@ -92,9 +92,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: 59255c2d770bbb743a65cc0ce821da45,
-    type: 2}
+  m_LightingDataAsset: {fileID: 0}
+  m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -805,12 +804,17 @@ PrefabInstance:
     - target: {fileID: 9026968662279729662, guid: ff8aa9b9fa9f3464a93658f37a824670,
         type: 3}
       propertyPath: field of view
-      value: 60.000004
+      value: 54.432228
       objectReference: {fileID: 0}
     - target: {fileID: 9026968662279729662, guid: ff8aa9b9fa9f3464a93658f37a824670,
         type: 3}
       propertyPath: m_FocalLength
-      value: 20.78461
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 9026968662279729662, guid: ff8aa9b9fa9f3464a93658f37a824670,
+        type: 3}
+      propertyPath: m_SensorSize.y
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 9026968662279729662, guid: ff8aa9b9fa9f3464a93658f37a824670,
         type: 3}

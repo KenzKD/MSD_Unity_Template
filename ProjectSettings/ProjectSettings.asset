@@ -866,7 +866,7 @@ PlayerSettings:
     Standalone: 1
     WebGL: 1
   il2cppStacktraceInformation:
-    Standalone: 1
+    Standalone: 0
   managedStrippingLevel:
     EmbeddedLinux: 1
     GameCoreScarlett: 1

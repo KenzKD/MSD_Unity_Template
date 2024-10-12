@@ -10,7 +10,7 @@ public class SettingsManager : MonoBehaviour
     public static SettingsManager Instance;
 
     // Game state flags
-    public static bool GameisPaused, GameisStarted, isPausible = true;
+    public static bool GameisPaused, GameisStarted, isPausible = false;
 
     // UI elements
     public Slider _bgmSlider, _sfxSlider;
@@ -34,17 +34,17 @@ public class SettingsManager : MonoBehaviour
 
         if (isPausible)
         {
-            settingObject.SetActive(false);
-            _bgmSlider.value = _bgmSlider.maxValue;
-            _sfxSlider.value = _sfxSlider.maxValue;
-            StartGame();
-        }
-        else
-        {
             settingObject.SetActive(true);
             // Load volume settings or set to max
             _bgmSlider.value = PlayerPrefs.GetFloat("bgmSavedVolume", _bgmSlider.maxValue);
             _sfxSlider.value = PlayerPrefs.GetFloat("sfxSavedVolume", _sfxSlider.maxValue);
+        }
+        else
+        {
+            settingObject.SetActive(false);
+            _bgmSlider.value = _bgmSlider.maxValue;
+            _sfxSlider.value = _sfxSlider.maxValue;
+            StartGame();
         }
 
         // Apply the volume settings

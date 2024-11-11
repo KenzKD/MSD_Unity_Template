@@ -17,9 +17,9 @@ namespace extOSC.Core
 
 		private static readonly byte[] _valuesBuffer = new byte[_packetSize]; // Max UDP size. But better use available default MTU size - 1432.
 
-		private static readonly object _lock = new object();
+		private static readonly object _lock = new();
 
-		private static readonly List<byte[]> _buffers = new List<byte[]>()
+		private static readonly List<byte[]> _buffers = new()
 		{
 			new byte[_packetSize],
 			new byte[_packetSize],
@@ -31,7 +31,7 @@ namespace extOSC.Core
 			new byte[_packetSize],
 		};
 
-		private static readonly List<byte[]> _packetsBuffers = new List<byte[]>()
+		private static readonly List<byte[]> _packetsBuffers = new()
 		{
 			new byte[_packetSize],
 			new byte[_packetSize],
@@ -43,7 +43,7 @@ namespace extOSC.Core
 			new byte[_packetSize],
 		};
 
-		private static readonly Dictionary<OSCValueType, OSCPacker> _packersDictionary = new Dictionary<OSCValueType, OSCPacker>()
+		private static readonly Dictionary<OSCValueType, OSCPacker> _packersDictionary = new()
 		{
 			{OSCValueType.Int, new OSCPackerInt()},
 			{OSCValueType.Null, new OSCPackerNull()},
@@ -259,10 +259,12 @@ namespace extOSC.Core
 			{
 				var timeStamp = (long) UnpackValue(OSCValueType.Long, bytes, ref start);
 
-				bundle = new OSCBundle();
-				bundle.TimeStamp = timeStamp;
+                bundle = new OSCBundle
+                {
+                    TimeStamp = timeStamp
+                };
 
-				while (start < end)
+                while (start < end)
 				{
 					var packetLength = (int) UnpackValue(OSCValueType.Int, bytes, ref start);
 					var packet = UnpackInternal(bytes, ref start, start + packetLength);
@@ -293,8 +295,7 @@ namespace extOSC.Core
 				// START ARRAY
 				if (valueTag == '[')
 				{
-					if (valuesArray == null)
-						valuesArray = new Dictionary<int, OSCValue>();
+					valuesArray ??= new Dictionary<int, OSCValue>();
 
 					valuesArray.Add(valuesArray.Count, OSCValue.Array());
 

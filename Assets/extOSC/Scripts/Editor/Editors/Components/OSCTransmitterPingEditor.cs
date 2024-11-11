@@ -12,19 +12,19 @@ namespace extOSC.Editor.Components
 	{
 		#region Static Private Vars
 
-		private static readonly GUIContent _settingsContent = new GUIContent("Settings:");
+		private static readonly GUIContent _settingsContent = new("Settings:");
 
-		private static readonly GUIContent _intervalContent = new GUIContent("Interval:");
+		private static readonly GUIContent _intervalContent = new("Interval:");
 
-		private static readonly GUIContent _autoStartContent = new GUIContent("Auto Start");
+		private static readonly GUIContent _autoStartContent = new("Auto Start");
 
-		private static readonly GUIContent _inGameContent = new GUIContent("In Game Controls:");
+		private static readonly GUIContent _inGameContent = new("In Game Controls:");
 
-		private static readonly GUIContent _startContent = new GUIContent("Start");
+		private static readonly GUIContent _startContent = new("Start");
 
-		private static readonly GUIContent _stopContent = new GUIContent("Stop");
+		private static readonly GUIContent _stopContent = new("Stop");
 
-		private static readonly GUIContent _pauseContent = new GUIContent("Pause");
+		private static readonly GUIContent _pauseContent = new("Pause");
 
 		#endregion
 

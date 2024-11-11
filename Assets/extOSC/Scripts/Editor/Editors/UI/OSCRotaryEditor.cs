@@ -14,13 +14,13 @@ namespace extOSC.Editor.Components.UI
 	{
 		#region Static Private Vars
 
-		private static readonly GUIContent _settingsContent = new GUIContent("Settings:");
+		private static readonly GUIContent _settingsContent = new("Settings:");
 
-		private static readonly GUIContent _rotartySettingsContent = new GUIContent("Rotary Settings:");
+		private static readonly GUIContent _rotartySettingsContent = new("Rotary Settings:");
 
-		private static readonly GUIContent _valueSettingsContent = new GUIContent("Value Settings:");
+		private static readonly GUIContent _valueSettingsContent = new("Value Settings:");
 
-		private static readonly GUIContent _resetValueContent = new GUIContent("Reset Value Settings:");
+		private static readonly GUIContent _resetValueContent = new("Reset Value Settings:");
 
 		#endregion
 

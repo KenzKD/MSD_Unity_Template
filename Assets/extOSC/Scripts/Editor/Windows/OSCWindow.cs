@@ -58,8 +58,7 @@ namespace extOSC.Editor.Windows
 		{
 			get
 			{
-				if (_rootPanel == null)
-					_rootPanel = CreateRoot();
+				_rootPanel ??= CreateRoot();
 
 				return _rootPanel;
 			}

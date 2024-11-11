@@ -14,13 +14,13 @@ namespace extOSC.Editor.Drawers
 	{
 		#region Static Public Methods
 
-		private static GUIContent _memberNoneContent = new GUIContent("- None -");
+		private static GUIContent _memberNoneContent = new("- None -");
 
 		private static GUIContent[] _nullOptions = {_memberNoneContent};
 
-		private static GUIContent _targetDefaultContent = new GUIContent("Target:");
+		private static GUIContent _targetDefaultContent = new("Target:");
 
-		private static GUIContent _memberDefaultContent = new GUIContent("Member:");
+		private static GUIContent _memberDefaultContent = new("Member:");
 
 		#endregion
 
@@ -241,10 +241,12 @@ namespace extOSC.Editor.Drawers
 			for (var i = 0; i < membersLength; i++)
 			{
 				var member = _members[i];
-				var content = new GUIContent();
-				content.text = OnMemberName != null ? OnMemberName.Invoke(member) : OSCEditorUtils.MemberName(member);
+                var content = new GUIContent
+                {
+                    text = OnMemberName != null ? OnMemberName.Invoke(member) : OSCEditorUtils.MemberName(member)
+                };
 
-				_membersNames[i + 1] = content;
+                _membersNames[i + 1] = content;
 			}
 		}
 

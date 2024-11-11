@@ -1,7 +1,6 @@
 ﻿/* Copyright (c) 2020 ExT (V.Sigalkin) */
 
 using System;
-using System.Collections.Generic;
 
 namespace extOSC.Core.Packers
 {
@@ -9,7 +8,7 @@ namespace extOSC.Core.Packers
 	{
 		#region Private Static Vars
 
-		private static readonly DateTime _zeroTime = new DateTime(1900, 1, 1, 0, 0, 0, 0);
+		private static readonly DateTime _zeroTime = new(1900, 1, 1, 0, 0, 0, 0);
 
 		#endregion
 

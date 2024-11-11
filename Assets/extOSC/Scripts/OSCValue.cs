@@ -11,33 +11,33 @@ namespace extOSC
 	{
 		#region Static Public Methods
 
-		public static OSCValue Long(long value) => new OSCValue(OSCValueType.Long, value);
+		public static OSCValue Long(long value) => new(OSCValueType.Long, value);
 
-		public static OSCValue Char(char value) => new OSCValue(OSCValueType.Char, value);
+		public static OSCValue Char(char value) => new(OSCValueType.Char, value);
 
-		public static OSCValue Color(Color value) => new OSCValue(OSCValueType.Color, value);
+		public static OSCValue Color(Color value) => new(OSCValueType.Color, value);
 
-		public static OSCValue Blob(byte[] value) => new OSCValue(OSCValueType.Blob, value);
+		public static OSCValue Blob(byte[] value) => new(OSCValueType.Blob, value);
 
-		public static OSCValue Int(int value) => new OSCValue(OSCValueType.Int, value);
+		public static OSCValue Int(int value) => new(OSCValueType.Int, value);
 
-		public static OSCValue Bool(bool value) => new OSCValue(value ? OSCValueType.True : OSCValueType.False, value);
+		public static OSCValue Bool(bool value) => new(value ? OSCValueType.True : OSCValueType.False, value);
 
-		public static OSCValue Float(float value) => new OSCValue(OSCValueType.Float, value);
+		public static OSCValue Float(float value) => new(OSCValueType.Float, value);
 
-		public static OSCValue Double(double value) => new OSCValue(OSCValueType.Double, value);
+		public static OSCValue Double(double value) => new(OSCValueType.Double, value);
 
-		public static OSCValue String(string value) => new OSCValue(OSCValueType.String, value == null ? string.Empty : value);
+		public static OSCValue String(string value) => new(OSCValueType.String, value == null ? string.Empty : value);
 
-		public static OSCValue Null() => new OSCValue(OSCValueType.Null, null);
+		public static OSCValue Null() => new(OSCValueType.Null, null);
 
-		public static OSCValue Impulse() => new OSCValue(OSCValueType.Impulse, null);
+		public static OSCValue Impulse() => new(OSCValueType.Impulse, null);
 
-		public static OSCValue TimeTag(DateTime value) => new OSCValue(OSCValueType.TimeTag, value);
+		public static OSCValue TimeTag(DateTime value) => new(OSCValueType.TimeTag, value);
 
-		public static OSCValue Midi(OSCMidi value) => new OSCValue(OSCValueType.Midi, value);
+		public static OSCValue Midi(OSCMidi value) => new(OSCValueType.Midi, value);
 
-		public static OSCValue Array(params OSCValue[] values) => new OSCValue(OSCValueType.Array, new List<OSCValue>(values));
+		public static OSCValue Array(params OSCValue[] values) => new(OSCValueType.Array, new List<OSCValue>(values));
 
 		[Obsolete]
 		public static char GetTag(Type type)

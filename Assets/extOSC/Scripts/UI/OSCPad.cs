@@ -268,7 +268,7 @@ namespace extOSC.UI
 		private Vector2 _minValue;
 
 		[SerializeField]
-		private OSCEventVector2 _onValueChanged = new OSCEventVector2();
+		private OSCEventVector2 _onValueChanged = new();
 
 		[SerializeField]
 		private RectTransform _handleRect;
@@ -314,11 +314,13 @@ namespace extOSC.UI
 			{
 				if (WholeNumbers) return Vector2.one;
 
-				var step = new Vector2();
-				step.x = (MaxValue.x - MinValue.x) * 0.1f;
-				step.y = (MaxValue.y - MinValue.y) * 0.1f;
+                var step = new Vector2
+                {
+                    x = (MaxValue.x - MinValue.x) * 0.1f,
+                    y = (MaxValue.y - MinValue.y) * 0.1f
+                };
 
-				return step;
+                return step;
 			}
 		}
 

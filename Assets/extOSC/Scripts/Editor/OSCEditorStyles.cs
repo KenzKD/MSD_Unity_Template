@@ -41,10 +41,7 @@ namespace extOSC.Editor
 		{
 			get
 			{
-				if (_box == null)
-				{
-					_box = new GUIStyle("box");
-				}
+				_box ??= new GUIStyle("box");
 
 				return _box;
 			}
@@ -54,13 +51,10 @@ namespace extOSC.Editor
 		{
 			get
 			{
-				if (_centerLabel == null)
-				{
-					_centerLabel = new GUIStyle(EditorStyles.label)
+				_centerLabel ??= new GUIStyle(EditorStyles.label)
 					{
 						alignment = TextAnchor.MiddleCenter
 					};
-				}
 
 				return _centerLabel;
 			}
@@ -70,14 +64,11 @@ namespace extOSC.Editor
 		{
 			get
 			{
-				if (_centerBoldLabel == null)
-				{
-					_centerBoldLabel = new GUIStyle(EditorStyles.label)
+				_centerBoldLabel ??= new GUIStyle(EditorStyles.label)
 					{
 						alignment = TextAnchor.MiddleCenter,
 						fontStyle = FontStyle.Bold
 					};
-				}
 
 				return _centerBoldLabel;
 			}
@@ -87,10 +78,7 @@ namespace extOSC.Editor
 		{
 			get
 			{
-				if (_consoleItemBackEven == null)
-				{
-					_consoleItemBackEven = new GUIStyle("CN EntryBackEven");
-				}
+				_consoleItemBackEven ??= new GUIStyle("CN EntryBackEven");
 
 				return _consoleItemBackEven;
 			}
@@ -100,10 +88,7 @@ namespace extOSC.Editor
 		{
 			get
 			{
-				if (_consoleItemBackOdd == null)
-				{
-					_consoleItemBackOdd = new GUIStyle("CN EntryBackOdd");
-				}
+				_consoleItemBackOdd ??= new GUIStyle("CN EntryBackOdd");
 
 				return _consoleItemBackOdd;
 			}
@@ -113,11 +98,10 @@ namespace extOSC.Editor
 		{
 			get
 			{
-				if (_consoleLabel == null)
-				{
-					_consoleLabel = new GUIStyle(EditorStyles.label);
-					_consoleLabel.richText = true;
-				}
+				_consoleLabel ??= new GUIStyle(EditorStyles.label)
+                    {
+                        richText = true
+                    };
 
 				return _consoleLabel;
 			}
@@ -127,11 +111,10 @@ namespace extOSC.Editor
 		{
 			get
 			{
-				if (_consoleTimeLabel == null)
-				{
-					_consoleTimeLabel = new GUIStyle(ConsoleLabel);
-					_consoleTimeLabel.alignment = TextAnchor.MiddleRight;
-				}
+				_consoleTimeLabel ??= new GUIStyle(ConsoleLabel)
+                    {
+                        alignment = TextAnchor.MiddleRight
+                    };
 
 				return _consoleTimeLabel;
 			}
@@ -141,11 +124,10 @@ namespace extOSC.Editor
 		{
 			get
 			{
-				if (_consoleBoldLabel == null)
-				{
-					_consoleBoldLabel = new GUIStyle(EditorStyles.boldLabel);
-					_consoleBoldLabel.richText = true;
-				}
+				_consoleBoldLabel ??= new GUIStyle(EditorStyles.boldLabel)
+                    {
+                        richText = true
+                    };
 
 				return _consoleBoldLabel;
 			}
@@ -155,10 +137,7 @@ namespace extOSC.Editor
 		{
 			get
 			{
-				if (_searchField == null)
-				{
-					_searchField = new GUIStyle("toolbarTextField");
-				}
+				_searchField ??= new GUIStyle("toolbarTextField");
 
 				return _searchField;
 			}

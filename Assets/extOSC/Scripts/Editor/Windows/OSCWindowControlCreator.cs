@@ -52,10 +52,9 @@ namespace extOSC.Editor.Windows
 		public static void CreateControl(ControlData data)
 		{
 			var instance = GetWindow<OSCWindowControlCreator>(false);
-			if (instance._createCallback != null)
-				instance._createCallback(data, instance._menuCommand);
+            instance._createCallback?.Invoke(data, instance._menuCommand);
 
-			instance.Close();
+            instance.Close();
 		}
 
 		#endregion

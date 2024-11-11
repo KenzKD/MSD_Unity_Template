@@ -22,9 +22,9 @@ namespace extOSC.Components.ReceiverReflections
 
 		[SerializeField]
 		[FormerlySerializedAs("reflectionMembers")]
-		private List<OSCReflectionMember> _reflectionMembers = new List<OSCReflectionMember>();
+		private List<OSCReflectionMember> _reflectionMembers = new();
 
-		protected readonly Dictionary<OSCReflectionMember, OSCReflectionProperty> _cachedProperties = new Dictionary<OSCReflectionMember, OSCReflectionProperty>();
+		protected readonly Dictionary<OSCReflectionMember, OSCReflectionProperty> _cachedProperties = new();
 
 		#endregion
 
@@ -122,8 +122,7 @@ namespace extOSC.Components.ReceiverReflections
 			{
 				foreach (var property in _cachedProperties.Values)
 				{
-					if (property != null)
-						property.SetValue(value);
+					property?.SetValue(value);
 				}
 			}
 		}

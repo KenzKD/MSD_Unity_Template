@@ -26,7 +26,7 @@ namespace extOSC
 		Array    // Tag: "[" and "]"
 	}
 
-	[System.Flags]
+	[Flags]
 	public enum OSCReflectionType
 	{
 		Unknown = 0x00,

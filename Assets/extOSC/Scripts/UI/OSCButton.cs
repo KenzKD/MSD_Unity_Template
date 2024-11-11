@@ -72,7 +72,7 @@ namespace extOSC.UI
 		protected bool _value;
 
 		[SerializeField]
-		private OSCEventBool _onValueChanged = new OSCEventBool();
+		private OSCEventBool _onValueChanged = new();
 
 		[SerializeField]
 		private Graphic _graphic;

@@ -15,43 +15,43 @@ namespace extOSC.Editor.Panels
 	{
 		#region Static Private Vars
 
-		private static readonly GUIContent _createContent = new GUIContent("Create");
+		private static readonly GUIContent _createContent = new("Create");
 
-		private static readonly GUIContent _openContent = new GUIContent("Open");
+		private static readonly GUIContent _openContent = new("Open");
 
-		private static readonly GUIContent _bundleEmptyContent = new GUIContent("Map Bundle is empty!");
+		private static readonly GUIContent _bundleEmptyContent = new("Map Bundle is empty!");
 
-		private static readonly GUIContent _addAddressContent = new GUIContent("Add Address");
+		private static readonly GUIContent _addAddressContent = new("Add Address");
 
-		private static readonly GUIContent _infoContent = new GUIContent("Create or load map bundle!");
+		private static readonly GUIContent _infoContent = new("Create or load map bundle!");
 
-		private static readonly GUIContent _addressContent = new GUIContent("Address:");
+		private static readonly GUIContent _addressContent = new("Address:");
 
-		private static readonly GUIContent _valuesContent = new GUIContent("Values:");
+		private static readonly GUIContent _valuesContent = new("Values:");
 
-		private static readonly GUIContent _addMapValueContent = new GUIContent("Add Map Value");
+		private static readonly GUIContent _addMapValueContent = new("Add Map Value");
 
-		private static readonly GUIContent _maximumContent = new GUIContent("Maximum:");
+		private static readonly GUIContent _maximumContent = new("Maximum:");
 
-		private static readonly GUIContent _minimumContent = new GUIContent("Minimum: ");
+		private static readonly GUIContent _minimumContent = new("Minimum: ");
 
-		private static readonly GUIContent _inputContent = new GUIContent("Input:");
+		private static readonly GUIContent _inputContent = new("Input:");
 
-		private static readonly GUIContent _outputContent = new GUIContent("Output:");
+		private static readonly GUIContent _outputContent = new("Output:");
 
-		private static readonly GUIContent _clampContent = new GUIContent("Clamp:");
+		private static readonly GUIContent _clampContent = new("Clamp:");
 
-		private static readonly GUIContent _toBoolContent = new GUIContent("True if:");
+		private static readonly GUIContent _toBoolContent = new("True if:");
 
-		private static readonly GUIContent _valueContent = new GUIContent("Value:");
+		private static readonly GUIContent _valueContent = new("Value:");
 
-		private static readonly GUIContent _trueContent = new GUIContent("True:");
+		private static readonly GUIContent _trueContent = new("True:");
 
-		private static readonly GUIContent _falseContent = new GUIContent("False:");
+		private static readonly GUIContent _falseContent = new("False:");
 
-		private static readonly GUIContent _emptyContent = new GUIContent("- Empty -");
+		private static readonly GUIContent _emptyContent = new("- Empty -");
 
-		private static readonly GUIContent _closeContent = new GUIContent("x");
+		private static readonly GUIContent _closeContent = new("x");
 
 		#endregion
 
@@ -83,7 +83,7 @@ namespace extOSC.Editor.Panels
 
 		private OSCMapBundle _currentMapBundle;
 
-		private readonly Dictionary<object, OSCMapType> _mapTypeTemp = new Dictionary<object, OSCMapType>();
+		private readonly Dictionary<object, OSCMapType> _mapTypeTemp = new();
 
 		#endregion
 
@@ -586,10 +586,12 @@ namespace extOSC.Editor.Panels
 
 		private void CreateMapValue(OSCMapMessage mapMessage, OSCMapType mapType)
 		{
-			var mapValue = new OSCMapValue();
-			mapValue.Type = mapType;
+            var mapValue = new OSCMapValue
+            {
+                Type = mapType
+            };
 
-			if (mapType == OSCMapType.FloatToBool)
+            if (mapType == OSCMapType.FloatToBool)
 			{
 				mapValue.Value = 0.5f;
 			}

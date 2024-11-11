@@ -13,8 +13,7 @@ namespace extOSC.Components.Events
 
 		protected override void Invoke(OSCMessage message)
 		{
-			if (onReceive != null)
-				onReceive.Invoke(message);
+			onReceive?.Invoke(message);
 		}
 
 		#endregion

@@ -13,23 +13,23 @@ namespace extOSC.Editor.Components
 	{
 		#region Static Private Vars
 
-		private static readonly GUIContent _targetTitleContent = new GUIContent("Target:");
+		private static readonly GUIContent _targetTitleContent = new("Target:");
 
-		private static readonly GUIContent _settingsTitleContent = new GUIContent("Informer Settings:");
+		private static readonly GUIContent _settingsTitleContent = new("Informer Settings:");
 
-		private static readonly GUIContent _informOnChangedContent = new GUIContent("Inform on changed");
+		private static readonly GUIContent _informOnChangedContent = new("Inform on changed");
 
-		private static readonly GUIContent _informIntervalContent = new GUIContent("Send interval:");
+		private static readonly GUIContent _informIntervalContent = new("Send interval:");
 
 		#endregion
 
 		#region Static Private Vars
 
-		private static readonly GUIContent _transmitterComponentSettingsContent = new GUIContent("Transmitter Component Settings:");
+		private static readonly GUIContent _transmitterComponentSettingsContent = new("Transmitter Component Settings:");
 
-		private static readonly GUIContent _otherSettingsContent = new GUIContent("Other Settings:");
+		private static readonly GUIContent _otherSettingsContent = new("Other Settings:");
 
-		private static readonly GUIContent _mapBundleContent = new GUIContent("Map Bundle:");
+		private static readonly GUIContent _mapBundleContent = new("Map Bundle:");
 
 		#endregion
 
@@ -74,10 +74,12 @@ namespace extOSC.Editor.Components
 			_addressYProperty = serializedObject.FindProperty("AddressY");
 			_addressZProperty = serializedObject.FindProperty("AddressZ");
 
-			// Create reflection member editor.
-			_reflectionDrawer = new OSCReflectionMemberDrawer(_reflectionMemberProperty, typeof(Vector3));
-			_reflectionDrawer.ReflectionAccess = OSCReflectionAccess.Read;
-		}
+            // Create reflection member editor.
+            _reflectionDrawer = new OSCReflectionMemberDrawer(_reflectionMemberProperty, typeof(Vector3))
+            {
+                ReflectionAccess = OSCReflectionAccess.Read
+            };
+        }
 
 		protected virtual void OnDisable()
 		{ }

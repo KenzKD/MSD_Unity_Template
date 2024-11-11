@@ -13,17 +13,17 @@ namespace extOSC.Editor.Panels
 	{
 		#region Static Private Vars
 
-		private static readonly GUIContent _clearContent = new GUIContent("Clear");
+		private static readonly GUIContent _clearContent = new("Clear");
 
-		private static readonly GUIContent _transmittedContent = new GUIContent("Transmitted");
+		private static readonly GUIContent _transmittedContent = new("Transmitted");
 
-		private static readonly GUIContent _receivedContent = new GUIContent("Received");
+		private static readonly GUIContent _receivedContent = new("Received");
 
-		private static readonly GUIContent _trackLastContent = new GUIContent("Track Last");
+		private static readonly GUIContent _trackLastContent = new("Track Last");
 
-		private static readonly GUIContent _openInDebugContent = new GUIContent("Open in debug");
+		private static readonly GUIContent _openInDebugContent = new("Open in debug");
 
-		private static readonly GUIContent _generateCodeContent = new GUIContent("Generate Sharp Code");
+		private static readonly GUIContent _generateCodeContent = new("Generate Sharp Code");
 
 		#endregion
 
@@ -189,10 +189,12 @@ namespace extOSC.Editor.Panels
 				SelectedMessage = _consoleBuffer.Length > 0 ? _consoleBuffer[0] : null;
 			}
 
-			var viewRect = new Rect(contentRect);
-			viewRect.height = _consoleBuffer.Length * _lineHeight;
+            var viewRect = new Rect(contentRect)
+            {
+                height = _consoleBuffer.Length * _lineHeight
+            };
 
-			if (viewRect.height > contentRect.height)
+            if (viewRect.height > contentRect.height)
 				viewRect.width -= 15f;
 
 			var itemRect = new Rect(0, viewRect.y, viewRect.width, _lineHeight);

@@ -13,19 +13,19 @@ namespace extOSC.Editor
 	{
 		#region Static Private Vars
 
-		private static readonly GUIContent _transmitterAddressContent = new GUIContent("OSC Transmitter Address:");
+		private static readonly GUIContent _transmitterAddressContent = new("OSC Transmitter Address:");
 
-		private static readonly GUIContent _transmitterAddressContentSmall = new GUIContent("OSC Address:");
+		private static readonly GUIContent _transmitterAddressContentSmall = new("OSC Address:");
 
-		private static readonly GUIContent _receiverAddressContent = new GUIContent("OSC Receiver Address:");
+		private static readonly GUIContent _receiverAddressContent = new("OSC Receiver Address:");
 
-		private static readonly GUIContent _receiverAddressContentSmall = new GUIContent("OSC Address:");
+		private static readonly GUIContent _receiverAddressContentSmall = new("OSC Address:");
 
-		private static readonly GUIContent _transmitterContent = new GUIContent("OSC Transmitter:");
+		private static readonly GUIContent _transmitterContent = new("OSC Transmitter:");
 
-		private static readonly GUIContent _receiverContent = new GUIContent("OSC Receiver:");
+		private static readonly GUIContent _receiverContent = new("OSC Receiver:");
 
-		private static readonly GUIContent _emptyContent = new GUIContent("- Empty -");
+		private static readonly GUIContent _emptyContent = new("- Empty -");
 
 		#endregion
 

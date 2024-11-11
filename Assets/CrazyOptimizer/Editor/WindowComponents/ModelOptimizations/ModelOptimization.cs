@@ -17,7 +17,7 @@ namespace CrazyGames.WindowComponents.ModelOptimizations
         private static bool _isAnalyzing;
         private static bool _includeFilesFromPackages;
 
-        private static readonly List<string> _modelFormats = new List<string>() { ".fbx", ".dae", ".3ds", ".dxf", ".obj" };
+        private static readonly List<string> _modelFormats = new() { ".fbx", ".dae", ".3ds", ".dxf", ".obj" };
 
         public static void RenderGUI()
         {

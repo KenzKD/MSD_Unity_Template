@@ -13,9 +13,9 @@ namespace extOSC.Editor.Panels
 	{
 		#region Static Public Vars
 
-		private static readonly GUIContent _packetNotSelectedContent = new GUIContent("Packet is not selected!");
+		private static readonly GUIContent _packetNotSelectedContent = new("Packet is not selected!");
 
-		private static readonly GUIContent _openInDebugContent = new GUIContent("Open in debug");
+		private static readonly GUIContent _openInDebugContent = new("Open in debug");
 
 		#endregion
 

@@ -25,7 +25,7 @@ namespace extOSC.Core.Network
 
 		#region Static Private Vars
 
-		private static readonly List<ClientInfo> _clientsList = new List<ClientInfo>();
+		private static readonly List<ClientInfo> _clientsList = new();
 
 		#endregion
 
@@ -39,9 +39,11 @@ namespace extOSC.Core.Network
 
 			if (clientInfo == null)
 			{
-				clientInfo = new ClientInfo();
-				clientInfo.Client = new UdpClient(localEndPoint);
-				clientInfo.Client.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
+                clientInfo = new ClientInfo
+                {
+                    Client = new UdpClient(localEndPoint)
+                };
+                clientInfo.Client.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
 				clientInfo.Client.DontFragment = true;
 
 				_clientsList.Add(clientInfo);
@@ -54,11 +56,8 @@ namespace extOSC.Core.Network
 
 		public static void Close(UdpClient client)
 		{
-			var clientInfo = _clientsList.FirstOrDefault(c => c.Client == client);
-			if (clientInfo == null)
-				throw new Exception();
-
-			clientInfo.Links--;
+			var clientInfo = _clientsList.FirstOrDefault(c => c.Client == client) ?? throw new Exception();
+            clientInfo.Links--;
 
 			if (clientInfo.Links <= 0)
 			{

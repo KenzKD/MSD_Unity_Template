@@ -14,23 +14,23 @@ namespace extOSC.Editor.Components.UI
 	{
 		#region Static Private Vars
 
-		private static readonly GUIContent _maxContent = new GUIContent("Max");
+		private static readonly GUIContent _maxContent = new("Max");
 
-		private static readonly GUIContent _minContent = new GUIContent("Min");
+		private static readonly GUIContent _minContent = new("Min");
 
-		private static readonly GUIContent _settingsContent = new GUIContent("Settings:");
+		private static readonly GUIContent _settingsContent = new("Settings:");
 
-		private static readonly GUIContent _padSettingsContent = new GUIContent("Pad Settings:");
+		private static readonly GUIContent _padSettingsContent = new("Pad Settings:");
 
-		private static readonly GUIContent _valueSettingsContent = new GUIContent("Value Settings:");
+		private static readonly GUIContent _valueSettingsContent = new("Value Settings:");
 
-		private static readonly GUIContent _resetValueContent = new GUIContent("Reset Value Settings:");
+		private static readonly GUIContent _resetValueContent = new("Reset Value Settings:");
 
-		private static readonly GUIContent _valueContent = new GUIContent("Value");
+		private static readonly GUIContent _valueContent = new("Value");
 
-		private static readonly GUIContent _xAxisContent = new GUIContent("X Axis");
+		private static readonly GUIContent _xAxisContent = new("X Axis");
 
-		private static readonly GUIContent _yAxisContent = new GUIContent("Y Axis");
+		private static readonly GUIContent _yAxisContent = new("Y Axis");
 
 		#endregion
 

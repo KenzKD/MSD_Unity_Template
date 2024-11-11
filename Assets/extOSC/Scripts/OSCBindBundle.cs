@@ -23,7 +23,7 @@ namespace extOSC
 		#region Protected Vars
 
 		[SerializeField]
-		private OSCEventBundle _callback = new OSCEventBundle();
+		private OSCEventBundle _callback = new();
 
 		#endregion
 

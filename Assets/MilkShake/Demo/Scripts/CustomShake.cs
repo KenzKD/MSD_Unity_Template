@@ -33,13 +33,15 @@ namespace MilkShake.Demo
 
         private void Awake()
         {
-            shakeData = new ShakeParameters();
-            shakeData.Strength = 0.5f;
-            shakeData.Roughness = 5;
-            shakeData.FadeIn = 0.1f;
-            shakeData.FadeOut = 1f;
-            shakeData.PositionInfluence = Vector3.one;
-            shakeData.RotationInfluence = Vector3.one * 10;
+            shakeData = new ShakeParameters
+            {
+                Strength = 0.5f,
+                Roughness = 5,
+                FadeIn = 0.1f,
+                FadeOut = 1f,
+                PositionInfluence = Vector3.one,
+                RotationInfluence = Vector3.one * 10
+            };
 
             strengthSlider.value = shakeData.Strength;
             roughnessSlider.value = shakeData.Roughness;

@@ -20,7 +20,7 @@ namespace extOSC
 	{
 		#region Static Private Vars
 
-		private static readonly Dictionary<string, List<string>> _cachedAddress = new Dictionary<string, List<string>>();
+		private static readonly Dictionary<string, List<string>> _cachedAddress = new();
 
 		#endregion
 

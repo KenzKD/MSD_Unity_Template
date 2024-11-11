@@ -14,11 +14,11 @@ namespace extOSC.Editor.Components.UI
 	{
 		#region Static Private Vars
 
-		private static readonly GUIContent _settingsContent = new GUIContent("Settings:");
+		private static readonly GUIContent _settingsContent = new("Settings:");
 
-		private static readonly GUIContent _buttonSettingsContent = new GUIContent("Button Settings:");
+		private static readonly GUIContent _buttonSettingsContent = new("Button Settings:");
 
-		private static readonly GUIContent _valueSettingsContent = new GUIContent("Value Settings:");
+		private static readonly GUIContent _valueSettingsContent = new("Value Settings:");
 
 		#endregion
 

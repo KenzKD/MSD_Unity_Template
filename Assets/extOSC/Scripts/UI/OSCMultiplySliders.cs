@@ -136,7 +136,7 @@ namespace extOSC.UI
 		private HorizontalOrVerticalLayoutGroup _layoutGroup;
 
 		[SerializeField]
-		private List<OSCSlider> _sliders = new List<OSCSlider>();
+		private List<OSCSlider> _sliders = new();
 
 		[SerializeField]
 		private Color _defaultColor;
@@ -202,7 +202,7 @@ namespace extOSC.UI
 				}
 			}
 
-			if (_currentSlider != null) _currentSlider.OnDrag(eventData);
+			_currentSlider?.OnDrag(eventData);
 		}
 
 		public void OnInitializePotentialDrag(PointerEventData eventData)

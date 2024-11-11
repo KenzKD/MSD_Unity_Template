@@ -185,7 +185,7 @@ namespace extOSC.Examples
 
 		private Color _defaultImageColor;
 
-		private Dictionary<Image, Coroutine> _blinkCoroutinePool = new Dictionary<Image, Coroutine>();
+		private Dictionary<Image, Coroutine> _blinkCoroutinePool = new();
 
 		#endregion
 

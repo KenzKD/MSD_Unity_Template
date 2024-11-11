@@ -12,23 +12,23 @@ namespace extOSC.Editor.Components
 	{
 		#region Static Private Vars
 
-		private static readonly GUIContent _pingSettingsContent = new GUIContent("Ping Client Settings:");
+		private static readonly GUIContent _pingSettingsContent = new("Ping Client Settings:");
 
-		private static readonly GUIContent _pingStatusContent = new GUIContent("Ping Client Status:");
+		private static readonly GUIContent _pingStatusContent = new("Ping Client Status:");
 
-		private static readonly GUIContent _intervalContent = new GUIContent("Interval:");
+		private static readonly GUIContent _intervalContent = new("Interval:");
 
-		private static readonly GUIContent _timeoutContent = new GUIContent("Timeout:");
+		private static readonly GUIContent _timeoutContent = new("Timeout:");
 
-		private static readonly GUIContent _autoStartContent = new GUIContent("Auto Start");
+		private static readonly GUIContent _autoStartContent = new("Auto Start");
 
-		private static readonly GUIContent _inGameContent = new GUIContent("In Game Controls:");
+		private static readonly GUIContent _inGameContent = new("In Game Controls:");
 
-		private static readonly GUIContent _startContent = new GUIContent("Start");
+		private static readonly GUIContent _startContent = new("Start");
 
-		private static readonly GUIContent _stopContent = new GUIContent("Stop");
+		private static readonly GUIContent _stopContent = new("Stop");
 
-		private static readonly GUIContent _pauseContent = new GUIContent("Pause");
+		private static readonly GUIContent _pauseContent = new("Pause");
 
 		#endregion
 

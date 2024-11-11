@@ -77,10 +77,12 @@ namespace extOSC.Editor
 			{
 				if (_splitterTexture == null)
 				{
-					_splitterTexture = new Texture2D(2, 2);
-					_splitterTexture.hideFlags = HideFlags.DontSave;
+                    _splitterTexture = new Texture2D(2, 2)
+                    {
+                        hideFlags = HideFlags.DontSave
+                    };
 
-					var colors = new Color32[_splitterTexture.height * _splitterTexture.width];
+                    var colors = new Color32[_splitterTexture.height * _splitterTexture.width];
 
 					for (var i = 0; i < colors.Length; i++)
 					{

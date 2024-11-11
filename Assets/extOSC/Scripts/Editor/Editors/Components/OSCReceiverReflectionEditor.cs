@@ -18,15 +18,15 @@ namespace extOSC.Editor.Components
 	{
 		#region Static Private Vars
 
-		private static readonly GUIContent _targetTitleContent = new GUIContent("Target:");
+		private static readonly GUIContent _targetTitleContent = new("Target:");
 
-		private static readonly GUIContent _reflectionReceiverContent = new GUIContent("Receiver Reflection Settings:");
+		private static readonly GUIContent _reflectionReceiverContent = new("Receiver Reflection Settings:");
 
 		#endregion
 
 		#region Private Vars
 
-		private readonly List<OSCReflectionMemberDrawer> _reflectionDrawers = new List<OSCReflectionMemberDrawer>();
+		private readonly List<OSCReflectionMemberDrawer> _reflectionDrawers = new();
 
 		private OSCReceiverReflection _receiverReflection;
 

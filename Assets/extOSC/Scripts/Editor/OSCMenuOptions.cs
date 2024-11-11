@@ -225,11 +225,13 @@ namespace extOSC.Editor
 			informer.InformOnChanged = onChanged;
 			informer.InformInterval = interval;
 
-			var reflection = new OSCReflectionMember();
-			reflection.Target = component;
-			reflection.MemberName = "Value";
+            var reflection = new OSCReflectionMember
+            {
+                Target = component,
+                MemberName = "Value"
+            };
 
-			if (!reflection.IsValid())
+            if (!reflection.IsValid())
 				reflection.MemberName = "value";
 
 			informer.ReflectionTarget = reflection;

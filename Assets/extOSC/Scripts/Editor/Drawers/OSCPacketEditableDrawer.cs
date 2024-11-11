@@ -13,29 +13,29 @@ namespace extOSC.Editor.Drawers
 	{
 		#region Static Private Vars
 
-		private static readonly GUIContent _bundleEmptyContent = new GUIContent("Bundle is empty!");
+		private static readonly GUIContent _bundleEmptyContent = new("Bundle is empty!");
 
-		private static readonly GUIContent _addressContent = new GUIContent("Address:");
+		private static readonly GUIContent _addressContent = new("Address:");
 
-		private static readonly GUIContent _addBundleContent = new GUIContent("Add Bundle");
+		private static readonly GUIContent _addBundleContent = new("Add Bundle");
 
-		private static readonly GUIContent _addMessageContent = new GUIContent("Add Message");
+		private static readonly GUIContent _addMessageContent = new("Add Message");
 
-		private static readonly GUIContent _addValueContent = new GUIContent("Add Value");
+		private static readonly GUIContent _addValueContent = new("Add Value");
 
-		private static readonly GUIContent _beginArrayContent = new GUIContent("Begin Array");
+		private static readonly GUIContent _beginArrayContent = new("Begin Array");
 
-		private static readonly GUIContent _endArrayContent = new GUIContent("End Array");
+		private static readonly GUIContent _endArrayContent = new("End Array");
 
-		private static readonly GUIContent _addToArrayContent = new GUIContent("Array:");
+		private static readonly GUIContent _addToArrayContent = new("Array:");
 
-		private static readonly GUIContent _closeContent = new GUIContent("x");
+		private static readonly GUIContent _closeContent = new("x");
 
 		#endregion
 
 		#region Private Vars
 
-		private static readonly Dictionary<object, OSCValueType> _valueTypeTemp = new Dictionary<object, OSCValueType>();
+		private static readonly Dictionary<object, OSCValueType> _valueTypeTemp = new();
 
 		#endregion
 

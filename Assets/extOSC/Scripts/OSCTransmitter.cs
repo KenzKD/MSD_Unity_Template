@@ -168,7 +168,7 @@ namespace extOSC
 		[FormerlySerializedAs("useBundle")]
 		private bool _useBundle;
 
-		private readonly List<IOSCPacket> _bundleBuffer = new List<IOSCPacket>();
+		private readonly List<IOSCPacket> _bundleBuffer = new();
 
 		private OSCTransmitterBackend _transmitterBackend => __transmitterBackend ?? (__transmitterBackend = OSCTransmitterBackend.Create());
 
@@ -254,8 +254,7 @@ namespace extOSC
 
 			if ((options & OSCSendOptions.IgnoreMap) == 0)
 			{
-				if (MapBundle != null)
-					MapBundle.Map(packet);
+				MapBundle?.Map(packet);
 			}
 
 			var length = OSCConverter.Pack(packet, out var buffer);

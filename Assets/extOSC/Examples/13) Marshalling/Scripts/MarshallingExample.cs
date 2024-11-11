@@ -44,15 +44,17 @@ namespace extOSC.Examples
 			// Create Message
 			var message = new OSCMessage(_address);
 
-			// Create structure
-			var structure = new MarshallingStructure();
-			structure.IntValue = 1337;
-			structure.StringValue = "Hello, OSC World!";
-			structure.FloatValue = 13.37f;
+            // Create structure
+            var structure = new MarshallingStructure
+            {
+                IntValue = 1337,
+                StringValue = "Hello, OSC World!",
+                FloatValue = 13.37f
+            };
 
-			// Convert structure to bytes by marshalling!
-			// Marshalling can sometimes be quicker, than any other form of conversion of data in OSC
-			var bytes = OSCUtilities.StructToByte(structure);
+            // Convert structure to bytes by marshalling!
+            // Marshalling can sometimes be quicker, than any other form of conversion of data in OSC
+            var bytes = OSCUtilities.StructToByte(structure);
 
 			// Add bytes to message
 			message.AddValue(OSCValue.Blob(bytes));

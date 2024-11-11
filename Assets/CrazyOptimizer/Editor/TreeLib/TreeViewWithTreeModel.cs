@@ -21,7 +21,7 @@ namespace CrazyGames.TreeLib
 	internal class TreeViewWithTreeModel<T> : TreeView where T : TreeElement
 	{
 		TreeModel<T> m_TreeModel;
-		readonly List<TreeViewItem> m_Rows = new List<TreeViewItem>(100);
+		readonly List<TreeViewItem> m_Rows = new(100);
 		public event Action treeChanged;
 
 		public TreeModel<T> treeModel { get { return m_TreeModel; } }
@@ -112,7 +112,7 @@ namespace CrazyGames.TreeLib
 
 			const int kItemDepth = 0; // tree is flattened when searching
 
-			Stack<T> stack = new Stack<T>();
+			Stack<T> stack = new();
 			foreach (var element in searchFromThis.children)
 				stack.Push((T)element);
 			while (stack.Count > 0)

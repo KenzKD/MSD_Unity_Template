@@ -130,11 +130,12 @@ namespace MilkShake
         /// <returns>A ShakeResult containing the position and rotation shake amounts.</returns>
         public ShakeResult UpdateShake(float deltaTime)
         {
-            ShakeResult result = new ShakeResult();
-
-            //Get shake values
-            result.PositionShake = getPositionShake();
-            result.RotationShake = getRotationShake();
+            ShakeResult result = new()
+            {
+                //Get shake values
+                PositionShake = getPositionShake(),
+                RotationShake = getRotationShake()
+            };
 
             //Update timers
             //Protection for updating timers more than once per frame.

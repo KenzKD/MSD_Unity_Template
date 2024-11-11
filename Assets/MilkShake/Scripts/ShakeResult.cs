@@ -18,10 +18,11 @@ namespace MilkShake
 
         public static ShakeResult operator +(ShakeResult a, ShakeResult b)
         {
-            ShakeResult c = new ShakeResult();
-
-            c.PositionShake = a.PositionShake + b.PositionShake;
-            c.RotationShake = a.RotationShake + b.RotationShake;
+            ShakeResult c = new()
+            {
+                PositionShake = a.PositionShake + b.PositionShake,
+                RotationShake = a.RotationShake + b.RotationShake
+            };
 
             return c;
         }

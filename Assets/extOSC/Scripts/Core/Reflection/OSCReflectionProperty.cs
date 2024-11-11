@@ -126,7 +126,7 @@ namespace extOSC.Core.Reflection
 		// FIELD
 		private object GetFieldValue()
 		{
-			return _fieldInfo == null ? null : _fieldInfo.GetValue(_target);
+			return _fieldInfo?.GetValue(_target);
 		}
 
 		private void SetFieldValue(object value)

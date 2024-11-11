@@ -14,11 +14,11 @@ namespace extOSC.Editor
 	{
 		#region Static Private Vars
 
-		private static readonly GUIContent _emptyBundleContent = new GUIContent("Map Bundle is empty!");
+		private static readonly GUIContent _emptyBundleContent = new("Map Bundle is empty!");
 
-		private static readonly GUIContent _openButton = new GUIContent("Open in Mapper");
+		private static readonly GUIContent _openButton = new("Open in Mapper");
 
-		private static readonly GUIContent _typeContents = new GUIContent("Type:");
+		private static readonly GUIContent _typeContents = new("Type:");
 
 		#endregion
 

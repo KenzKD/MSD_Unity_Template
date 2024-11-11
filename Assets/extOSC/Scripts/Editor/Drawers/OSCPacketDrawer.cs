@@ -11,15 +11,15 @@ namespace extOSC.Editor.Drawers
 	{
 		#region Static Private Vars
 
-		private static readonly GUIContent _addressContent = new GUIContent("Address:");
+		private static readonly GUIContent _addressContent = new("Address:");
 
-		private static readonly GUIContent _bundleContent = new GUIContent("Bundle:");
+		private static readonly GUIContent _bundleContent = new("Bundle:");
 
-		private static readonly GUIContent _bundleEmptyContent = new GUIContent("Bundle is empty");
+		private static readonly GUIContent _bundleEmptyContent = new("Bundle is empty");
 
-		private static readonly GUIContent _beginArrayContent = new GUIContent("Begin Array");
+		private static readonly GUIContent _beginArrayContent = new("Begin Array");
 
-		private static readonly GUIContent _endArrayContent = new GUIContent("End Array");
+		private static readonly GUIContent _endArrayContent = new("End Array");
 
 		#endregion
 

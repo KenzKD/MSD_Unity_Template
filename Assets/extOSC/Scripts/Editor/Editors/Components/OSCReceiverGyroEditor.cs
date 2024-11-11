@@ -14,11 +14,11 @@ namespace extOSC.Editor.Components
 	{
 		#region Static Private Vars
 
-		private static readonly GUIContent _modeContent = new GUIContent("Mode:");
+		private static readonly GUIContent _modeContent = new("Mode:");
 
-		private static readonly GUIContent _lerpSpeedContent = new GUIContent("Lerp Speed:");
+		private static readonly GUIContent _lerpSpeedContent = new("Lerp Speed:");
 
-		private static readonly GUIContent _eventsSettingsContent = new GUIContent("Events Settings:");
+		private static readonly GUIContent _eventsSettingsContent = new("Events Settings:");
 
 		#endregion
 

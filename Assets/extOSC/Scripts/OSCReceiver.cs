@@ -106,21 +106,21 @@ namespace extOSC
 		[FormerlySerializedAs("localPort")]
 		private int _localPort = 7001;
 
-		private readonly Queue<IOSCPacket> _packets = new Queue<IOSCPacket>();
+		private readonly Queue<IOSCPacket> _packets = new();
 
-		private readonly List<IOSCBind> _messageBindings = new List<IOSCBind>();
+		private readonly List<IOSCBind> _messageBindings = new();
 
-		private readonly Stack<IOSCBind> _messageBindStack = new Stack<IOSCBind>();
+		private readonly Stack<IOSCBind> _messageBindStack = new();
 
-		private readonly Stack<IOSCBind> _messageUnbindStack = new Stack<IOSCBind>();
+		private readonly Stack<IOSCBind> _messageUnbindStack = new();
 
-		private readonly List<IOSCBindBundle> _bundleBindings = new List<IOSCBindBundle>();
+		private readonly List<IOSCBindBundle> _bundleBindings = new();
 
-		private readonly Stack<IOSCBindBundle> _bundleBindStack = new Stack<IOSCBindBundle>();
+		private readonly Stack<IOSCBindBundle> _bundleBindStack = new();
 
-		private readonly Stack<IOSCBindBundle> _bundleUnbindStack = new Stack<IOSCBindBundle>();
+		private readonly Stack<IOSCBindBundle> _bundleUnbindStack = new();
 
-		private readonly object _lock = new object();
+		private readonly object _lock = new();
 
 		private OSCReceiverBackend __receiverBackend;
 
@@ -140,8 +140,7 @@ namespace extOSC
 				{
 					var packet = _packets.Dequeue();
 
-					if (MapBundle != null)
-						MapBundle.Map(packet);
+					MapBundle?.Map(packet);
 
 					OSCConsole.Received(this, packet);
 
@@ -334,8 +333,7 @@ namespace extOSC
 
 				if (OSCUtilities.CompareAddresses(bind.ReceiverAddress, message.Address))
 				{
-					if (bind.Callback != null)
-						bind.Callback.Invoke(message);
+					bind.Callback?.Invoke(message);
 				}
 			}
 

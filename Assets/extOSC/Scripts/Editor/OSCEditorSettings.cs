@@ -101,14 +101,15 @@ namespace extOSC.Editor
 				return defaultColor;
 			}
 
-			var color = new Color();
+            var color = new Color
+            {
+                r = EditorPrefs.GetFloat(keyR, 1),
+                g = EditorPrefs.GetFloat(keyG + ".g", 1),
+                b = EditorPrefs.GetFloat(keyB + ".b", 1),
+                a = EditorPrefs.GetFloat(keyA + ".a", 1)
+            };
 
-			color.r = EditorPrefs.GetFloat(keyR, 1);
-			color.g = EditorPrefs.GetFloat(keyG + ".g", 1);
-			color.b = EditorPrefs.GetFloat(keyB + ".b", 1);
-			color.a = EditorPrefs.GetFloat(keyA + ".a", 1);
-
-			return color;
+            return color;
 		}
 
 		// TRANSMITTER

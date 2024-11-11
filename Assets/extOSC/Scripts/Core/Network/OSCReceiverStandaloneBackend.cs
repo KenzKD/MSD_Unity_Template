@@ -110,8 +110,7 @@ namespace extOSC.Core.Network
 				var packet = Receive(receivedClient, result);
 				if (packet != null)
 				{
-					if (_receivedCallback != null)
-						_receivedCallback.Invoke(packet);
+					_receivedCallback?.Invoke(packet);
 				}
 
 				if (IsAvailable)

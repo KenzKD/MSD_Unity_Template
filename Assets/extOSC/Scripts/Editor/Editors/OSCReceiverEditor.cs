@@ -12,25 +12,25 @@ namespace extOSC.Editor
 	{
 		#region Static Private Vars
 
-		private static readonly GUIContent _localPortContent = new GUIContent("Local Port:");
+		private static readonly GUIContent _localPortContent = new("Local Port:");
 
-		private static readonly GUIContent _localHostContent = new GUIContent("Local Host:");
+		private static readonly GUIContent _localHostContent = new("Local Host:");
 
-		private static readonly GUIContent _localHostModeContent = new GUIContent("Local Host Mode:");
+		private static readonly GUIContent _localHostModeContent = new("Local Host Mode:");
 
-		private static readonly GUIContent _advancedContent = new GUIContent("Advanced Settings:");
+		private static readonly GUIContent _advancedContent = new("Advanced Settings:");
 
-		private static readonly GUIContent _mapBundleContent = new GUIContent("Map Bundle:");
+		private static readonly GUIContent _mapBundleContent = new("Map Bundle:");
 
-		private static readonly GUIContent _inGameContent = new GUIContent("In Game Controls:");
+		private static readonly GUIContent _inGameContent = new("In Game Controls:");
 
-		private static readonly GUIContent _inEditorContent = new GUIContent("In Editor Controls:");
+		private static readonly GUIContent _inEditorContent = new("In Editor Controls:");
 
-		private static readonly GUIContent _receiverSettingsContent = new GUIContent("Receiver Settings:");
+		private static readonly GUIContent _receiverSettingsContent = new("Receiver Settings:");
 
-		private static readonly GUIContent _autoConnectContent = new GUIContent("Auto Connect");
+		private static readonly GUIContent _autoConnectContent = new("Auto Connect");
 
-		private static readonly GUIContent _closeOnPauseContent = new GUIContent("Close On Pause");
+		private static readonly GUIContent _closeOnPauseContent = new("Close On Pause");
 
 		private static string _advancedSettingsText = "\"Advanced settings\" are not available for UWP (WSA).";
 

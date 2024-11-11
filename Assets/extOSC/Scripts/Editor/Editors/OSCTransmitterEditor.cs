@@ -10,37 +10,37 @@ namespace extOSC.Editor
 	{
 		#region Static Private Vars
 
-		private static readonly GUIContent _hostContent = new GUIContent("Remote Host:");
+		private static readonly GUIContent _hostContent = new("Remote Host:");
 
-		private static readonly GUIContent _portContent = new GUIContent("Remote Port:");
+		private static readonly GUIContent _portContent = new("Remote Port:");
 
-		private static readonly GUIContent _mapBundleContent = new GUIContent("Map Bundle:");
+		private static readonly GUIContent _mapBundleContent = new("Map Bundle:");
 
-		private static readonly GUIContent _advancedContent = new GUIContent("Advanced Settings:");
+		private static readonly GUIContent _advancedContent = new("Advanced Settings:");
 
-		private static readonly GUIContent _localPortModeContent = new GUIContent("Local Port Mode:");
+		private static readonly GUIContent _localPortModeContent = new("Local Port Mode:");
 
-		private static readonly GUIContent _localHostModeContent = new GUIContent("Local Host Mode:");
+		private static readonly GUIContent _localHostModeContent = new("Local Host Mode:");
 
-		private static readonly GUIContent _sourceReceiverContent = new GUIContent("Source Receiver:");
+		private static readonly GUIContent _sourceReceiverContent = new("Source Receiver:");
 
-		private static readonly GUIContent _localHostContent = new GUIContent("Local Host:");
+		private static readonly GUIContent _localHostContent = new("Local Host:");
 
-		private static readonly GUIContent _localPortContent = new GUIContent("Local Port:");
+		private static readonly GUIContent _localPortContent = new("Local Port:");
 
-		private static readonly GUIContent _inGameContent = new GUIContent("In Game Controls:");
+		private static readonly GUIContent _inGameContent = new("In Game Controls:");
 
-		private static readonly GUIContent _inEditorContent = new GUIContent("In Editor Controls:");
+		private static readonly GUIContent _inEditorContent = new("In Editor Controls:");
 
-		private static readonly GUIContent _transmitterSettingsContent = new GUIContent("Transmitter Settings:");
+		private static readonly GUIContent _transmitterSettingsContent = new("Transmitter Settings:");
 
-		private static readonly GUIContent _useBundleContent = new GUIContent("Use Bundle");
+		private static readonly GUIContent _useBundleContent = new("Use Bundle");
 
-		private static readonly GUIContent _autoConnectContent = new GUIContent("Auto Connect");
+		private static readonly GUIContent _autoConnectContent = new("Auto Connect");
 
-		private static readonly GUIContent _closeOnPauseContent = new GUIContent("Close On Pause");
+		private static readonly GUIContent _closeOnPauseContent = new("Close On Pause");
 
-		private static readonly GUIContent _orContent = new GUIContent("Or...");
+		private static readonly GUIContent _orContent = new("Or...");
 
 		private static string _advancedHelp = "Currently \"Advanced settings\" are not available for UWP (WSA).";
 

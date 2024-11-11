@@ -31,7 +31,7 @@ namespace extOSC
 
 		[SerializeField]
 		[FormerlySerializedAs("callback")]
-		private OSCEventMessage _callback = new OSCEventMessage();
+		private OSCEventMessage _callback = new();
 
 		#endregion
 

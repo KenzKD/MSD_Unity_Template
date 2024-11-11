@@ -60,9 +60,9 @@ namespace extOSC.Editor.Panels
 
 		private float _splitterTouchMargin = 5f;
 
-		private readonly List<Splitter> _splitters = new List<Splitter>();
+		private readonly List<Splitter> _splitters = new();
 
-		private readonly List<PanelContainer> _panelContainers = new List<PanelContainer>();
+		private readonly List<PanelContainer> _panelContainers = new();
 
 		private Splitter _selectedSplitter;
 
@@ -75,12 +75,14 @@ namespace extOSC.Editor.Panels
 
 		public void AddPanel(OSCPanel panel, float minimalSize, float size = 0.5f)
 		{
-			var data = new PanelContainer();
-			data.Panel = panel;
-			data.MinimumSizePixel = minimalSize;
-			data.Size = size;
+            var data = new PanelContainer
+            {
+                Panel = panel,
+                MinimumSizePixel = minimalSize,
+                Size = size
+            };
 
-			_panelContainers.Add(data);
+            _panelContainers.Add(data);
 
 			var fullSize = 0f;
 

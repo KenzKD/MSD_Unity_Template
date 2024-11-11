@@ -13,7 +13,7 @@ namespace MilkShake
         /// A static list of Shakers.
         /// Shakers are added to this list on Awake if Add To Global Shakers is set to true.
         /// </summary>
-        public static List<Shaker> GlobalShakers = new List<Shaker>();
+        public static List<Shaker> GlobalShakers = new();
 
         /// <summary>
         /// Shakes all global Shakers.
@@ -24,7 +24,7 @@ namespace MilkShake
         /// <returns>A single ShakeInstance that all global shakers will be using for the shake. Modifying this will change it for all shakers.</returns>
         public static ShakeInstance ShakeAll(IShakeParameters shakeData, int? seed = null)
         {
-            ShakeInstance shakeInstance = new ShakeInstance(shakeData, seed);
+            ShakeInstance shakeInstance = new(shakeData, seed);
             AddShakeAll(shakeInstance);
             return shakeInstance;
         }
@@ -98,7 +98,7 @@ namespace MilkShake
         [SerializeField]
         private bool addToGlobalShakers;
 
-        private List<ShakeInstance> activeShakes = new List<ShakeInstance>();
+        private List<ShakeInstance> activeShakes = new();
 
         private void Awake()
         {
@@ -118,7 +118,7 @@ namespace MilkShake
 
         private void Update()
         {
-            ShakeResult shake = new ShakeResult();
+            ShakeResult shake = new();
 
             for (int i = 0; i < activeShakes.Count; i++)
             {
@@ -144,7 +144,7 @@ namespace MilkShake
         /// <returns>A ShakeInstance which can be used to stop the shake or modify the shake parameters.</returns>
         public ShakeInstance Shake(IShakeParameters shakeData, int? seed = null)
         {
-            ShakeInstance shakeInstance = new ShakeInstance(shakeData, seed);
+            ShakeInstance shakeInstance = new(shakeData, seed);
             AddShake(shakeInstance);
             return shakeInstance;
         }
@@ -165,7 +165,7 @@ namespace MilkShake
 
             if (distance < maxDistance)
             {
-                ShakeInstance shakeInstance = new ShakeInstance(shakeData, seed);
+                ShakeInstance shakeInstance = new(shakeData, seed);
                 float scale = 1 - Mathf.Clamp01(distance / maxDistance);
                 shakeInstance.StrengthScale = scale;
                 shakeInstance.RoughnessScale = scale;

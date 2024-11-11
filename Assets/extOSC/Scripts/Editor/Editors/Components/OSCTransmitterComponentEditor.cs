@@ -12,11 +12,11 @@ namespace extOSC.Editor.Components
 	{
 		#region Static Private Vars
 
-		private static readonly GUIContent _transmitterComponentSettingsContent = new GUIContent("Transmitter Component Settings:");
+		private static readonly GUIContent _transmitterComponentSettingsContent = new("Transmitter Component Settings:");
 
-		private static readonly GUIContent _otherSettingsContent = new GUIContent("Other Settings:");
+		private static readonly GUIContent _otherSettingsContent = new("Other Settings:");
 
-		private static readonly GUIContent _mapBundleContent = new GUIContent("Map Bundle:");
+		private static readonly GUIContent _mapBundleContent = new("Map Bundle:");
 
 		#endregion
 

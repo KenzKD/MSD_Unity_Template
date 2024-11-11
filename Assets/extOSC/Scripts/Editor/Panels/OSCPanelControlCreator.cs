@@ -11,25 +11,25 @@ namespace extOSC.Editor.Panels
 	{
 		#region Static Private Vars
 
-		private static readonly GUIContent _oscAddressContent = new GUIContent("OSC Address:");
+		private static readonly GUIContent _oscAddressContent = new("OSC Address:");
 
-		private static readonly GUIContent _oscTransmitterContent = new GUIContent("OSC Transmitter:");
+		private static readonly GUIContent _oscTransmitterContent = new("OSC Transmitter:");
 
-		private static readonly GUIContent _informerIntervalContent = new GUIContent("Informer Interval:");
+		private static readonly GUIContent _informerIntervalContent = new("Informer Interval:");
 
-		private static readonly GUIContent _addInformerContent = new GUIContent("Add Informer");
+		private static readonly GUIContent _addInformerContent = new("Add Informer");
 
-		private static readonly GUIContent _controlSettingsContent = new GUIContent("Create New Control:");
+		private static readonly GUIContent _controlSettingsContent = new("Create New Control:");
 
-		private static readonly GUIContent _controlColorContent = new GUIContent("Control Color:");
+		private static readonly GUIContent _controlColorContent = new("Control Color:");
 
-		private static readonly GUIContent _informOnChangedContent = new GUIContent("Inform On Changed");
+		private static readonly GUIContent _informOnChangedContent = new("Inform On Changed");
 
-		private static readonly GUIContent _informerSettingsContent = new GUIContent("Informer Settings:");
+		private static readonly GUIContent _informerSettingsContent = new("Informer Settings:");
 
-		private static readonly GUIContent _createContent = new GUIContent("Create");
+		private static readonly GUIContent _createContent = new("Create");
 
-		private static readonly GUIContent _errorCreateContent = new GUIContent("Create object again.");
+		private static readonly GUIContent _errorCreateContent = new("Create object again.");
 
 		#endregion
 
@@ -133,15 +133,17 @@ namespace extOSC.Editor.Panels
 				GUI.color = Color.green;
 				if (GUILayout.Button(_createContent))
 				{
-					var data = new OSCWindowControlCreator.ControlData();
-					data.ControlColor = ControlColor;
-					data.UseInformer = AddInformer;
-					data.InformAddress = InformerAddress;
-					data.InformInterval = InformerInterval;
-					data.InformOnChanged = InformOnChanged;
-					data.InformerTransmitter = InformerTransmitter;
+                    var data = new OSCWindowControlCreator.ControlData
+                    {
+                        ControlColor = ControlColor,
+                        UseInformer = AddInformer,
+                        InformAddress = InformerAddress,
+                        InformInterval = InformerInterval,
+                        InformOnChanged = InformOnChanged,
+                        InformerTransmitter = InformerTransmitter
+                    };
 
-					OSCWindowControlCreator.CreateControl(data);
+                    OSCWindowControlCreator.CreateControl(data);
 				}
 
 				GUI.color = Color.white;

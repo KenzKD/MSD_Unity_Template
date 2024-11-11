@@ -14,17 +14,17 @@ namespace extOSC.Editor.Panels
 	{
 		#region Private Static Vars
 
-		private static readonly GUIContent _sendActionContent = new GUIContent("Send");
+		private static readonly GUIContent _sendActionContent = new("Send");
 
-		private static readonly GUIContent _receiveActionContent = new GUIContent("Receive");
+		private static readonly GUIContent _receiveActionContent = new("Receive");
 
-		private static readonly GUIContent _selectActionContent = new GUIContent("Select");
+		private static readonly GUIContent _selectActionContent = new("Select");
 
-		private static readonly GUIContent _transmittersContent = new GUIContent("Transmitters:");
+		private static readonly GUIContent _transmittersContent = new("Transmitters:");
 
-		private static readonly GUIContent _receiversContent = new GUIContent("Receivers:");
+		private static readonly GUIContent _receiversContent = new("Receivers:");
 
-		private static readonly GUIContent _actionsContent = new GUIContent("Actions:");
+		private static readonly GUIContent _actionsContent = new("Actions:");
 
 		#endregion
 
@@ -114,8 +114,8 @@ namespace extOSC.Editor.Panels
 
 		public void Refresh()
 		{
-			_transmitters = Object.FindObjectsOfType<OSCTransmitter>();
-			_receivers = Object.FindObjectsOfType<OSCReceiver>();
+			_transmitters = Object.FindObjectsByType<OSCTransmitter>(FindObjectsSortMode.None);
+			_receivers = Object.FindObjectsByType<OSCReceiver>(FindObjectsSortMode.None);
 		}
 
 		#endregion

@@ -14,7 +14,7 @@ namespace CrazyGames.TreeLib
                 throw new NullReferenceException("The input 'IList<T> result' list is null");
             result.Clear();
 
-            Stack<T> stack = new Stack<T>();
+            Stack<T> stack = new();
             stack.Push(root);
 
             while (stack.Count > 0)
@@ -131,7 +131,7 @@ namespace CrazyGames.TreeLib
             if (!root.hasChildren)
                 return;
 
-            Stack<TreeElement> stack = new Stack<TreeElement>();
+            Stack<TreeElement> stack = new();
             stack.Push(root);
             while (stack.Count > 0)
             {
@@ -165,7 +165,7 @@ namespace CrazyGames.TreeLib
             if (elements.Count == 1)
                 return new List<T>(elements);
 
-            List<T> result = new List<T>(elements);
+            List<T> result = new(elements);
             result.RemoveAll(g => IsChildOf(g, elements));
             return result;
         }

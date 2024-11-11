@@ -15,20 +15,20 @@ namespace extOSC.Editor.Panels
 	{
 		#region Static Private Vars
 
-		private static readonly GUIContent _createContent = new GUIContent("Create");
+		private static readonly GUIContent _createContent = new("Create");
 
-		private static readonly GUIContent _openContent = new GUIContent("Open Packet");
+		private static readonly GUIContent _openContent = new("Open Packet");
 
-		private static readonly GUIContent _saveContent = new GUIContent("Save Packet");
+		private static readonly GUIContent _saveContent = new("Save Packet");
 
-		private static readonly GUIContent _generateCodeContent = new GUIContent("Generate Sharp Code");
+		private static readonly GUIContent _generateCodeContent = new("Generate Sharp Code");
 
-		private static readonly GUIContent _infoContent = new GUIContent("Create or load debug Packet!");
+		private static readonly GUIContent _infoContent = new("Create or load debug Packet!");
 
 		private static readonly GUIContent[] _createPopupItems =
 		{
-			new GUIContent("Message"),
-			new GUIContent("Bundle")
+			new("Message"),
+			new("Bundle")
 		};
 
 		#endregion

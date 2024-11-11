@@ -13,13 +13,13 @@ namespace extOSC.Editor.Components
 	{
 		#region Static Private Vars
 
-		private static readonly GUIContent _targetTitleContent = new GUIContent("Target:");
+		private static readonly GUIContent _targetTitleContent = new("Target:");
 
-		private static readonly GUIContent _settingsTitleContent = new GUIContent("Informer Settings:");
+		private static readonly GUIContent _settingsTitleContent = new("Informer Settings:");
 
-		private static readonly GUIContent _informOnChangedContent = new GUIContent("Inform on changed");
+		private static readonly GUIContent _informOnChangedContent = new("Inform on changed");
 
-		private static readonly GUIContent _informIntervalContent = new GUIContent("Send interval:");
+		private static readonly GUIContent _informIntervalContent = new("Send interval:");
 
 		#endregion
 
@@ -53,10 +53,12 @@ namespace extOSC.Editor.Components
 			_informOnChangedProperty = serializedObject.FindProperty("informOnChanged");
 			_informIntervalProperty = serializedObject.FindProperty("informInterval");
 
-			// Create reflection member editor.
-			_reflectionDrawer = new OSCReflectionMemberDrawer(_reflectionMemberProperty, _informer.InformerType);
-			_reflectionDrawer.ReflectionAccess = OSCReflectionAccess.Read;
-		}
+            // Create reflection member editor.
+            _reflectionDrawer = new OSCReflectionMemberDrawer(_reflectionMemberProperty, _informer.InformerType)
+            {
+                ReflectionAccess = OSCReflectionAccess.Read
+            };
+        }
 
 		#endregion
 

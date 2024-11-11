@@ -12,9 +12,9 @@ namespace extOSC.Editor.Components
 	{
 		#region Static Private Vars
 
-		private static readonly GUIContent _onReceiveContent = new GUIContent("On Receive:");
+		private static readonly GUIContent _onReceiveContent = new("On Receive:");
 
-		private static readonly GUIContent _eventsSettingsContent = new GUIContent("Events Settings:");
+		private static readonly GUIContent _eventsSettingsContent = new("Events Settings:");
 
 		#endregion
 

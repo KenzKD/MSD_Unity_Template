@@ -35,7 +35,7 @@ namespace extOSC.Mapping
 
 		[SerializeField]
 		[FormerlySerializedAs("values")]
-		private List<OSCMapValue> _values = new List<OSCMapValue>();
+		private List<OSCMapValue> _values = new();
 
 		#endregion
 

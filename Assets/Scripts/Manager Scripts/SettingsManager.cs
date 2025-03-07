@@ -64,6 +64,24 @@ public class SettingsManager : MonoBehaviour
         GameisStarted = true;
     }
 
+
+#if ENABLE_LEGACY_INPUT_MANAGER
+    // Old input backends are enabled.
+    private void Update()
+    {
+        if (Input.GetButtonDown("Cancel"))
+        {
+            OnQuit();
+            Debug.Log("Legacy Input");
+        }
+        if (Input.GetButtonDown("Restart"))
+        {
+            OnRestart();
+            Debug.Log("Legacy Input");
+        }
+    }
+#endif
+
     // Check if gameplay is allowed
     public bool AllowGamePlay()
     {
@@ -131,9 +149,10 @@ public class SettingsManager : MonoBehaviour
     }
 
     // Restart the game
-    public void Restart()
+    public void OnRestart()
     {
         DOTween.KillAll();
+        Debug.Log("Restart Game...");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Destroy(gameObject);
     }

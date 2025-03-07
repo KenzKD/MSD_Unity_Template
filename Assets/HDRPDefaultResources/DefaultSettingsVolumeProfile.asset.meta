@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/HDRPDefaultResources/DefaultSettingsVolumeProfile.asset.meta
 guid: f235861402cba994286dfd94474e460f
+========
+guid: c6dafef6e9fb0d34c9e97522e6bbdd5a
+>>>>>>>> 2d111cbeecb6cb2dcbba3e09baab28b66c3de5cb:Assets/HDRPDefaultResources/HDRenderPipelineAsset.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000

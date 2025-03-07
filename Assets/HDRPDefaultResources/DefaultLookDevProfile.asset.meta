@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/HDRPDefaultResources/DefaultLookDevProfile.asset.meta
 guid: 0d36f2d2003c61b47bf1bb0f477ec814
+========
+guid: f235861402cba994286dfd94474e460f
+>>>>>>>> 2d111cbeecb6cb2dcbba3e09baab28b66c3de5cb:Assets/HDRPDefaultResources/DefaultSettingsVolumeProfile.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000
